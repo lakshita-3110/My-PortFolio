@@ -1,24 +1,18 @@
 // Date and time
 
 function updateDateTime() {
-  let el = document.getElementById('date-time');
-  let now = new Date();
+  const el = document.getElementById("date-time");
+  const now = new Date();
 
-  const date = now.toLocaleDateString(undefined, {
-    weekday: 'short',
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  });
+  const day = now.getDate();
+  const month = now.getMonth() + 1;
+  const year = now.getFullYear();
 
-  const time = now.toLocaleTimeString(undefined, {
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-  });
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
 
-  // Show date + time in website
-  el.innerHTML = `${date} | ${time}`;
+  el.innerHTML = `${day}/${month}/${year} | ${hours}:${minutes}:${seconds}`;
 }
 
 updateDateTime();
@@ -27,31 +21,29 @@ setInterval(updateDateTime, 1000);
 
 
 
+//sidebar
 
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+const sidebar = document.getElementById("sidebar");
 
-// side bar
-const openBtn = document.getElementById('openBtn');
-const closeBtn = document.getElementById('closeBtn');
-const sidebar = document.getElementById('sidebar');
+// open sidebar
+openBtn.onclick = () => {
+  sidebar.classList.add("active");
+};
 
+// close sidebar
+closeBtn.onclick = () => {
+  sidebar.classList.remove("active");
+};
 
-openBtn.addEventListener('click', () => {
-  sidebar.classList.add('active');
-});
+// close when clicking outside
+document.onclick = (e) => {
+  if (!sidebar.contains(e.target) && e.target !== openBtn) {
+    sidebar.classList.remove("active");
+  }
+};
 
-
-closeBtn.addEventListener(
-  'click', () => {
-    sidebar.classList.remove('active');
-  });
-
-document.addEventListener(
-  'click', (e) => {
-
-    if (!sidebar.contains(e.target) && !openBtn.contains(e.target)) {
-      sidebar.classList.remove('active');
-    }
-  });
 
 
 //image slider
