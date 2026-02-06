@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     <header>
+    <div class="brand">
+      <div class="logo">
+        <H1>Portfolio</H1>
+      </div>
+      <div class="date">
+        <div id="date-time"></div>
+      </div>
+      <div class="line-bar">
+        <button id="openBtn" class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Sidebar -->
+        <div id="sidebar" class="sidebar">
+          <button id="closeBtn" class="close-btn">×</button>
+
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+    
+<!-- end  -->
+ <!-- homepage start    -->
+  <section id="home" class="home">
+    <div class="middel">
+      <div class="left">
+        <h3>Hello I AM</h3>
+        <h1>Lakshita Gurjar</h1>
+        <p> I Am Frontend Developer!</p>
+        <div id="timeDisplay" style="margin-top:18px;font-size:18px;color:#7cc4ff;"></div>
+        <button class="btn" id="viewWorkBtn">
+          <a href="#hero">View My Work</a></button>
+      </div>
+      <div class="right-banner">
+        <img src="images/image.png" alt="">
+      </div>
+    </div>
+  </section>
+  <!--home end -->
+  
+  <!-- skills start  -->
+   <section class="skills" id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skill-container">
+
+      <div class="skill-box">
+        <i class="fa-brands fa-html5 skill-icon" style="color:#ff5722;"></i>
+        <h3>HTML5</h3>
+        <p>Semantic structure</p>
+      </div>
+
+      <div class="skill-box">
+        <i class="fa-brands fa-css3-alt skill-icon" style="color:#2196f3;"></i>
+        <h3>CSS3</h3>
+        <p>Flexbox, Grid, Responsive Design</p>
+      </div>
+
+      <div class="skill-box">
+        <i class="fa-brands fa-js skill-icon" style="color:#f7df1e;"></i>
+        <h3>JavaScript</h3>
+        <p>DOM, Fetch API, </p>
+      </div>
+    </div>
+  </section>
+  <!-- skils End -->
+     <!-- hero start  -->
+      <main id="hero">
+    <section>
+      <h1 class="text-heading">My Project</h1>
+      <div class="slider" id="slider">
+        <div class="slides" id="slides">
+          <div class="slide" style="background-image:url('images/Screenshot\ 2026-01-15\ 160949.png')">
+            <div class="caption">
+              <strong>Project — Myntra View</strong>
+              <div>Myntra-Inspired E-Commerce Website | UI Design & Frontend Implementation</div>
+            </div>
+          </div>
+          <div class="slide" style="background-image:url('images/Screenshot\ 2026-01-15\ 155550.png')">
+            <div class="caption">
+              <strong>Project — Figma</strong>
+              <div>Design. Collaborate. Create.
+              </div>
+            </div>
+          </div>
+          <div class="slide" style="background-image:url('images/Screenshot\ 2026-02-06\ 120305.png')">
+            <div class="caption">
+              <strong>Project — IIP Website</strong>
+              <div>Empowering Skills. Building Careers.
+              </div>
+            </div>
+          </div>
+         
+        </div>
+
+        <div class="nav">
+          <button class="btn" id="prev" aria-label="Previous">◀</button>
+          <button class="btn" id="next" aria-label="Next">▶</button>
+        </div>
+
+        <div style="position:absolute;left:12px;bottom:12px;right:12px;display:flex;justify-content:center">
+          <div class="dots" id="dots"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- hero end -->
+   <section class="faq-accordion">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="accordion-item active">
+    <button class="accordion-header">
+      <span>1.) What services do you offer?</span>
+      <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+    </button>
+    <div class="accordion-body">
+      We provide website design, frontend development, UI/UX design, portfolio creation,
+      and custom JavaScript-based features.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">
+      <span>2.) How long does it take to complete a project?</span>
+      <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+    </button>
+    <div class="accordion-body">
+      Simple websites take 2–5 days. Complex projects may take 1–3 weeks.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">
+      <span>3.) How much does a website cost?</span>
+      <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+    </button>
+    <div class="accordion-body">
+      Pricing depends on project scope, features, and complexity.
+    </div>
+  </div>
+</section>
+<section class="faq-wrapper">
+
+  <!-- Tabs -->
+  <div class="faq-tabs">
+    <button class="tab active" data-tab="faq">FAQ</button>
+    <button class="tab" data-tab="features">Features</button>
+    <button class="tab" data-tab="pricing">Pricing</button>
+    <button class="tab" data-tab="contact">Contact</button>
+  </div>
+
+  <!-- Tab Contents -->
+  <div class="tab-box">
+
+    <div class="tab-content active" id="faq">
+      <h3>Frequently Asked Questions</h3>
+      <p><strong>Q:</strong> What services do you offer?</p>
+      <p><strong>A:</strong> Website design, frontend development, UI/UX design, portfolio creation, and JavaScript solutions.</p>
+
+      <p><strong>Q:</strong> How long does a project take?</p>
+      <p><strong>A:</strong> Simple sites take 2–5 days, complex apps may take 1–3 weeks.</p>
+    </div>
+
+    <div class="tab-content" id="features">
+      <h3>Features</h3>
+      <p>Clean design, responsive layout, accessible markup (ARIA), keyboard navigation, smooth animation, and easy theming.</p>
+      <ol>
+        <li>One-file copy & paste</li>
+        <li>Easy to style and extend</li>
+        <li>Works on mobile and desktop</li>
+      </ol>
+    </div>
+
+    <div class="tab-content" id="pricing">
+      <h3>Pricing</h3>
+      <p>
+        We offer three plans:<br>
+        <strong>Basic</strong> – simple sites<br>
+        <strong>Pro</strong> – multi-page websites<br>
+        <strong>Custom</strong> – web applications
+      </p>
+    </div>
+
+    <div class="tab-content" id="contact">
+      <h3>Contact</h3>
+      <p>
+        Want this integrated or customized?<br>
+        Email: <strong>gurjarlakshita988@gmail.com</strong>
+      </p>
+    </div>
+
+  </div>
+</section>
+  <section class="connect-area">
+    <h2 class="connect-title">Contact Me</h2>
+
+    <form id="connectForm" class="connect-form">
+      
+      <div class="input-box">
+        <input type="text" id="userName" placeholder="Your Name">
+        <small class="msg-error"></small>
+      </div>
+
+      <div class="input-box">
+        <input type="email" id="userEmail" placeholder="Your Email">
+        <small class="msg-error"></small>
+      </div>
+
+      <div class="input-box">
+        <textarea id="userMessage" placeholder="Your Message"></textarea>
+        <small class="msg-error"></small>
+      </div>
+
+      <button type="submit" class="send-btn">Send Message</button>
+    </form>
+  </section>
+
+  <div class="footer-section">
+    <footer class="footer">
+      <div class="container">
+
+        <div class="footer-about">
+          <h2>Thank you for visiting my Website!</h2>
+
+        </div>
+
+
+        <div class="footer-social">
+          <h3>Follow Me</h3>
+          <div class="icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="footer-copy">© 2025 All Rights Reserved</p>
+    </footer>
+  </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
